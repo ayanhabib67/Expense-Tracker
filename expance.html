@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --primary-color: #38bdf8;
+      --accent-color: #0ea5e9;
+      --success-color: #22c55e;
+      --danger-color: #ef4444;
+      --text-dark: #f1f5f9;
+      --text-light: #94a3b8;
+      --card-bg: #1e293b;
+      --border-color: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-dark);
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .income-entry {
+      background-color: #1e293b;
+      border: 1px solid var(--border-color);
+      padding: 1rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .income-entry:hover {
+      transform: translateY(-3px);
+      background-color: #334155;
+    }
+
+    .income-entry p {
+      margin: 0.25rem 0;
+    }
+
+    .amount {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .amount.income {
+      color: var(--success-color);
+    }
+
+    .amount.expense {
+      color: var(--danger-color);
+    }
+
+    .form-section {
+      margin-top: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border-color);
+      background-color: #0f172a;
+      color: var(--text-dark);
+      font-size: 1rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-expense {
+      background-color: var(--success-color);
+      color: white;
+    }
+
+
+    .btn-expense {
+      background-color: var(--danger-color);
+      color: white;
+    }
+
+    .btn-expense:hover {
+      background-color: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+ 
+    <div class="attendance-container" id="income"></div>
+    
+    <button type="button"  class="btn btn-expense"   onclick="removeAllEncome()"  style="background-color: #f43f5e;">Remove All Income</button>
+</div>
+  <script src="expance.js"></script>
+</body>
+</html>
